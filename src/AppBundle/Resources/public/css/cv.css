@@ -1,0 +1,22 @@
+.text-justify {
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.dl-horizontal dt {
+    text-align: left;
+    color : #760001;
+    width: 170px;
+}
+
+.dl-horizontal dd {
+    margin-bottom: 15px;
+}
+
+.dl-non-bold dt {
+    font-weight: normal;
+}
+

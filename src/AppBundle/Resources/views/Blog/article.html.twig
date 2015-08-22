@@ -1,0 +1,19 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    Blog - {{ parent() }}
+{% endblock %}
+
+{% block blogCV %}active{% endblock %}
+
+{% block body %}
+    <div class="container-fluid text-justify">
+        <div id="blog">
+            <div class="row-fluid">
+                Article : {{ article }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

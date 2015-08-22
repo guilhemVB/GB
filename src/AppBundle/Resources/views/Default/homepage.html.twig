@@ -1,0 +1,48 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+        {{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div id="homepage">
+        <div class="row-fluid">
+
+            <div class="col-sm-8">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Mon CV</div>
+                    <div class="panel-body">
+                        <p>Si vous recherchez un ingénieur en étude et développement informatique, allez lire mon CV !</p>
+                        <a href="{{ path('cv') }}" class="btn btn-success pull-right" role="button">Lire mon CV <span class='glyphicon glyphicon-search'></span></a>
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Mes Voyages</div>
+                    <div class="panel-body">
+                        <p>Si comme moi vous aimez voyager, ou simplement pour le plaisir des yeux, la rubrique des voyages est faite pour vous.</p>
+                        <p>New-York, l'Egypte, Rome, l'Islande et Prague, allez-y jeter un coup d'oeil !</p>
+                        <a href="{{ path('travels') }}" class="btn btn-danger pull-right" role="button">Voir les photos <span class='glyphicon glyphicon-picture'></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-primary" id="aboutMe">
+                    <div class="panel-heading">
+                        À propos de moi
+                    </div>
+                    <div class="panel-body">
+                        <p id="photoMe"><img src="{{ asset('bundles/app/images/photoMoi.jpg') }}" alt="Photo de Guilhem Bourgoin" /></p>
+                        <p>Bienvenue, je m'appelle Guilhem, j'ai {{ age }} ans, je suis ingénieur développeur logiciel, et ceci est mon site web.</p>
+                        <p>Vous allez trouver ici mon CV et mes photos de voyages.</p>
+                        <p><a href="https://www.facebook.com/guilhem.bourgoin" target="_blank"><img src="{{ asset('bundles/app/images/join-me-on-facebook.jpg') }}" alt="Facebook" border="0" /></a></p>
+                        <p><a href="{{ path('contact') }}">contact@guilhembourgoin.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

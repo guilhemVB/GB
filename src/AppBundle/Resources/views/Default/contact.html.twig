@@ -1,0 +1,66 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    Contact - {{ parent() }}
+{% endblock %}
+
+{% block activeContact %}active{% endblock %}
+
+{% block body %}
+    <div id="contact" class="container-fluid text-justify">
+        <div class="row-fluid">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <i class="glyphicon glyphicon-envelope"></i> Contact
+                    </div>
+                    <div class="panel-body">
+                        <p id="emailSent" class="bg-success" style="padding: 10px" hidden>Votre email a bien été envoyé</p>
+                        <form id="formEmail" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="email" class="col-sm-3">Adresse email *</label>
+
+                                <div class="col-sm-9">
+                                    <input name="email" type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-3">Nom *</label>
+
+                                <div class="col-sm-9">
+                                    <input name="name" type="text" class="form-control" id="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="col-sm-3">Sujet *</label>
+
+                                <div class="col-sm-9">
+                                    <input name="subject" type="text" class="form-control" id="subject" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="core" class="col-sm-3">Texte *</label>
+
+                                <div class="col-sm-9">
+                                    <textarea name="core" id="core" class="form-control" rows="10" required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary pull-right"><i
+                                        class="glyphicon glyphicon-envelope"></i> Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        var urlSendEmail = "{{ path('send_email') }}";
+        var urlHomepage = "{{ path('homepage') }}";
+    </script>
+    {{ parent() }}
+{% endblock %}

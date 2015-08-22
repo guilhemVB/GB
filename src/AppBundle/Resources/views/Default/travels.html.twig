@@ -1,0 +1,69 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+Voyages - {{ parent() }}
+{% endblock %}
+
+{% block activeTravel %}active{% endblock %}
+
+{% block body %}
+<div id="travel_main">
+    <div class="container-fluid">
+        <div style="margin-top: 40px">
+            <div class="row-fluid">
+                <div class="col-lg-10 col-lg-offset-1 banniere_image" style="background: url('{{ asset('bundles/app/photo_travel/first_turkey.JPG') }}') no-repeat;">
+                    <div class="banniere_description">
+                        2014    Turquie (Bodum, Pamukkale, Éphèse) ...
+                        <a style="background: url('{{ asset('bundles/app/images/fond_degraderouge.png') }}') repeat-x;" href="{{ path('travel', {'nameTravel': "turkey"}) }}" class="bouton_rouge">Voir les photos <img src="{{ asset('bundles/app/images/flecheblanchedroite.png') }}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="col-lg-10 col-lg-offset-1 banniere_image" style="background: url('{{ asset('bundles/app/photo_travel/first_prague.JPG') }}') no-repeat;">
+                    <div class="banniere_description">
+                        2013    Prague ...
+                        <a style="background: url('{{ asset('bundles/app/images/fond_degraderouge.png') }}') repeat-x;" href="{{ path('travel', {'nameTravel': "prague"}) }}" class="bouton_rouge">Voir les photos <img src="{{ asset('bundles/app/images/flecheblanchedroite.png') }}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="col-lg-10 col-lg-offset-1 banniere_image" style="background: url('{{ asset('bundles/app/photo_travel/first_newYork.jpg') }}') no-repeat;">
+                    <div class="banniere_description">
+                        2012    New-York ...
+                        <a style="background: url('{{ asset('bundles/app/images/fond_degraderouge.png') }}') repeat-x;" href="{{ path('travel', {'nameTravel': "newyork"}) }}" class="bouton_rouge">Voir les photos <img src="{{ asset('bundles/app/images/flecheblanchedroite.png') }}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+
+                <div class="col-lg-10 col-lg-offset-1 banniere_image" style="background: url('{{ asset('bundles/app/photo_travel/first_egypte.jpg') }}') no-repeat;">
+                    <div class="banniere_description">
+                        2008    Egypte ...
+                        <a style="background: url('{{ asset('bundles/app/images/fond_degraderouge.png') }}') repeat-x;" href="{{ path('travel', {'nameTravel': "egypte"}) }}" class="bouton_rouge">Voir les photos <img src="{{ asset('bundles/app/images/flecheblanchedroite.png') }}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+
+                <div class="col-lg-10 col-lg-offset-1 banniere_image" style="background: url('{{ asset('bundles/app/photo_travel/first_rome.jpg') }}') no-repeat;">
+                    <div class="banniere_description">
+                        2006    Rome ...
+                        <a style="background: url('{{ asset('bundles/app/images/fond_degraderouge.png') }}') repeat-x;" href="{{ path('travel', {'nameTravel': "rome"}) }}" class="bouton_rouge">Voir les photos <img src="{{ asset('bundles/app/images/flecheblanchedroite.png') }}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+
+                <div class="col-lg-10 col-lg-offset-1 banniere_image" style="background: url('{{ asset('bundles/app/photo_travel/first_icelande.jpg') }}') no-repeat;">
+                    <div class="banniere_description">
+                        2005    Islande ...
+                        <a style="background: url('{{ asset('bundles/app/images/fond_degraderouge.png') }}') repeat-x;" href="{{ path('travel', {'nameTravel': "islande"}) }}" class="bouton_rouge">Voir les photos <img src="{{ asset('bundles/app/images/flecheblanchedroite.png') }}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

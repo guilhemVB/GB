@@ -1,0 +1,555 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    CV - {{ parent() }}
+{% endblock %}
+
+{% block activeCV %}active{% endblock %}
+
+{% block body %}
+    <div class="container-fluid text-justify">
+        <div id="cv">
+            <div class="row-fluid">
+
+                <div class="col-sm-7 col-md-8">
+                    <div class="page-header">
+                        <h3>Ingénieur étude et développement de logiciels informatiques</h3>
+                        <a href="{{ asset('bundles/app/PDF/CV_Guilhem_Bourgoin.pdf') }}">Télécharger le CV au format
+                            PDF</a>
+                    </div>
+                </div>
+                <div class="col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <p id="photoMe"><img src="{{ asset('bundles/app/images/photoMoi.jpg') }}" alt="photo de moi"
+                                                 border="0"/></p>
+
+                            <p>Age : {{ age }} ans</p>
+
+                            <p>Adresse : Lyon</p>
+
+                            <p><a href="{{ path('contact') }}">contact@guilhembourgoin.com</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+            </div>
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Formation</legend>
+                        <dl class="dl-horizontal">
+                            <dt>2013</dt>
+                            <dd>
+                                <div>Obtention du Diplôme d'ingénieur de l'Institut Polytechnique de Grenoble - ESISAR
+                                    en alternance chez AKKA Technologies à Valence.
+                                </div>
+                                <div>Matières principales : systèmes embarqués, informatique et réseaux.</div>
+                            </dd>
+                            <dt>2010</dt>
+                            <dd>
+                                <div>Obtention d'un DUT GEII (Génie Electrique et Informatique Industrielle) à l'IUT de
+                                    Troyes.
+                                </div>
+                                <div>Matières principales : électronique, électricité, informatique industrielle.</div>
+                            </dd>
+                            <dt>2008</dt>
+                            <dd>Obtention d'un BAC scientifique à Sens (89) spécialité mathématiques.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-offset-1 col-md-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <legend>
+                                <a href="http://esisar.grenoble-inp.fr/" target="_blank">ESISAR</a>
+                            </legend>
+                            <p>Lécole nationale supérieure dingénieurs en systèmes avancés et réseaux (ESISAR) est une
+                                école dingénieurs de l'Institut Polytechnique de Grenoble située à Valence (INPG).
+                                L'ESISAR focalise son enseignement sur les systèmes avancés et les réseaux, intégrant
+                                électronique, informatique et technologies embarquées.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Compétences Techniques</legend>
+                        <dl class="dl-horizontal">
+                            <dt>Langages informatique</dt>
+                            <dd>C, C++, C#, Java J2EE, PHP 5, JavaScript (ExtJS et JQuery), Bootstrap 3, Ruby, VHDL,
+                                Matlab.
+                            </dd>
+                            <dt>Base de données</dt>
+                            <dd>MySQL, SQLite, liquibase</dd>
+                            <dt>Gestion de projet</dt>
+                            <dd>Cycle en V, cycle itératif incrémental, Scrum, Kanban.</dd>
+                            <dt>Méthodes de travail</dt>
+                            <dd>Scrum, eXtrem Programming (binômage, intégration continue, gestion de configuration,
+                                développement guidé par les tests (TDD), refactoring ...), diagrammes UML, programmation
+                                orientée objet, tests informatiques, règles de codage.
+                            </dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1 well-gray">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <center>
+                                <a href="http://fr.wikipedia.org/wiki/PHP" target="_blank">
+                                    <img src="{{ asset('bundles/app/images/php_mysql_logo.png') }}" alt="XP"
+                                         border="0"/>
+                                </a>
+                            </center>
+                            <center>
+                                <a href="http://fr.wikipedia.org/wiki/Java_%28langage%29" target="_blank">
+                                    <img src="{{ asset('bundles/app/images/java.jpg') }}" alt="Java" border="0"/>
+                                </a>
+                            </center>
+                            <br/>
+                            <center>
+                                <a href="http://fr.wikipedia.org/wiki/Extreme_programming" target="_blank">
+                                    <img src="{{ asset('bundles/app/images/XP.jpg') }}" alt="XP" border="0"/>
+                                </a>
+                                <a href="http://fr.wikipedia.org/wiki/Scrum_%28m%C3%A9thode%29" target="_blank">
+                                    <img src="{{ asset('bundles/app/images/scrum.jpg') }}" alt="XP" border="0"/>
+                                </a>
+                            </center>
+                            <br/>
+                            <a href="http://www.ruby-lang.org/fr/" target="_blank">
+                                <center>
+                                    <img src="{{ asset('bundles/app/images/logo_ruby.jpg') }}" alt="Ruby" border="0"/>
+                                </center>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Langues</legend>
+                        <dl class="dl-horizontal">
+                            <dt>Anglais</dt>
+                            <dd>TOEIC 835</dd>
+                            <dt>Espagnol</dt>
+                            <dd>niveau lycée</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h3>Expériences professionnelles</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Ingénieur R&D <i>- Depuis Janvier 2015 - Reputation VIP</i></legend>
+                        <p>Dans une équipe de 12 développeurs, je participe à l'évolution et à l'amélioration de
+                            logiciels de gestion de e-reputation. Dans le but d'améliorer la qualités des logiciels,
+                            j'ai proposé puis mis en place le BDD (avec Behat3) dans les différents projets.
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Scrum, BDD (Behat 3), gestion de configuration (Gitlab), intégration continue (Gitlab
+                                CI).
+                            </dd>
+                            <dt>Langages</dt>
+                            <dd>PHP 5, JQuery, Bootstrap 3, MongoDB, MySQL, PostGre.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1 well-gray">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <legend>
+                                <a href="http://www.reputationvip.com/fr/" target="_blank">Reputation VIP</a>
+                            </legend>
+                            <p>
+                            <center><img src="{{ asset('bundles/app/images/reputation-vip.jpg') }}" alt="Logo Reputation VIP"
+                                         border="0"/></center>
+                            </p>
+                            <p>Reputation VIP est une start-up lyonnaise qui crée des solutions technologiques innovantes pour aider les personnes et les entreprises à maîtriser leur e-réputation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Ingénieur R&D <i>- Septembre 2013 à Janvier 2015 - Decalog</i></legend>
+                        <p>Dans une équipe de 8 développeurs, j'ai participé à l'évolution et à l'amélioration du
+                            logiciel de gestion de bibliothèques en mode SaaS "e-paprika".
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Kanban, stand-up meeting, BDD (JBehave), gestion de configuration (SVN), intégration
+                                continue (Jenkins) et amélioration continue
+                            </dd>
+                            <dt>Langages</dt>
+                            <dd>Java J2EE et JavaScript (Ext JS).</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1 well-gray">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <legend>
+                                <a href="http://www.decalog.net/" target="_blank">Décalog</a>
+                            </legend>
+                            <p>
+                            <center><img src="{{ asset('bundles/app/images/logo_decalog.jpg') }}" alt="Logo Decalog"
+                                         border="0"/></center>
+                            </p>
+                            <p>Créée en 1987, Décalog est un éditeur de logiciels de gestion de bibliothèques et
+                                médiathèques. Décalog est un acteur majeur dans l'équipement logiciel des bibliothèques
+                                de toute taille avec sa gamme complète de logiciels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Création du site internet <a style="font-size: 21px;"
+                                                             href="http://www.vieillebranche.fr/" target="_blank">vieillebranche.fr</a>
+                            <i>- Depuis l'été 2013</i></legend>
+                        <p>A titre personnel, pour apprendre de nouvelles technologies et développer mes compétences, je
+                            développe sur mon temps libre le site internet de généalogie <a
+                                    href="http://www.vieillebranche.fr/" target="_blank">vieillebranche.fr</a>.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>TDD, cycle itératif et incrémental, gestion de configuration.</dd>
+                            <dt>Langages</dt>
+                            <dd>MySQL, PHP 5 (CodeIgniter 2.1), JavaScript (JQuery) et Bootstrap 3.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet Mineral Spirit<i> - 6 semaines (2013) - Apprenti chez AKKA Technologies</i>
+                        </legend>
+                        <p>Dans une équipe de deux personnes, j'ai participé à la création d'un site web pour le club
+                            d'escalade MineralSpirit, permettant de gérer les commandes du bar du club.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Framework CodeIgniter et diagrammes UML.</dd>
+                            <dt>Langages</dt>
+                            <dd>PHP 5, HTML, CSS et JavaScript.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <legend>
+                                <a href="http://www.akka.eu/" target="_blank">AKKA Technologies</a>
+                            </legend>
+                            <p>
+                            <center><img src="{{ asset('bundles/app/images/images_akka.jpg') }}" alt="Logo AKKA"
+                                         border="0"/></center>
+                            </p>
+                            <p>Formation d'ingénieur en apprentissage dans l'SSII AKKA Technologies à l'agence de
+                                Valence.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Démonstrateur Android<i> - 6 mois (2013) - Apprenti chez AKKA Technologies</i></legend>
+                        <p>Développement d'un logiciel d' "Outil d'aide aux contrôles visuels" sur une tablette Androïd
+                            pour réaliser un démonstrateur.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Cycle itératif et incrémental, diagrammes UML, tests informatiques.</dd>
+                            <dt>Langage</dt>
+                            <dd>Java.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <br/>
+                            <a href="http://fr.wikipedia.org/wiki/Android" target="_blank">
+                                <p>
+                                <center><img src="{{ asset('bundles/app/images/android-logo.png') }}" alt="Android"
+                                             border="0"/></center>
+                                </p>
+                            </a>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet GAP et Trac<i> - 4 mois (2012) - Apprenti chez AKKA Technologies</i></legend>
+                        <p>Le but était de mettre en place tous les outils nécessaires pour visualiser physiquement
+                            lavancement dun projet (Trac, tableau de suivi de projet, courbe d'avancement ). Afin de
+                            tester ces outils, jai travaillé en parallèle sur le projet GAP (Générateur Automatique de
+                            Planning). Il sagit de créer un programme qui permet de calculer une trame de planning sur
+                            un certain nombre de semaines dans le cadre dun service hospitalier.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Scrum, eXtrem Programming (Binômage, tests automatiques, intégration continue, gestion
+                                de configuration, refactoring, cycles itératif et incrémental), diagramme UML et Visual
+                                Studio 2010.
+                            </dd>
+                            <dt>Langages</dt>
+                            <dd>C# et XML.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <br/>
+                            <a href="http://fr.wikipedia.org/wiki/Trac_%28logiciel%29" target="_blank">
+                                <p>
+                                <center><img src="{{ asset('bundles/app/images/trac-logo.png') }}" alt="Trac"
+                                             border="0"/></center>
+                                </p>
+                            </a>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet Règles de codage<i> - 4 mois (2011) - Apprenti chez AKKA Technologies</i>
+                        </legend>
+                        <p>Le projet consiste à vérifier des règles de codages sur un code en C (puis sur du VBA), de
+                            façon automatique grâce à un script en Ruby, afin de faciliter le travail qui devait être
+                            fait à la main.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>TDD (Test Driven Development), intégration continue, couverture structurelle, gestion de
+                                configuration, cycle itératif et incrémental, binômage et diagramme UML.
+                            </dd>
+                            <dt>Langages</dt>
+                            <dd>C, Ruby et VBA.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet Maquette<i> - 2 mois (2011) - Apprenti chez AKKA Technologies</i></legend>
+                        <p>Création dune application embarquée sur un microcontrôleur possédant un écran tactile, et
+                            communication de la carte avec un ordinateur.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Scrum, Modèle MVC, gestion de configuration, intégration continue, TDD, compilation
+                                croisée, binômage et Qt creator.
+                            </dd>
+                            <dt>Langage</dt>
+                            <dd>C++</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet Qt<i> - 1 mois (2011) - Apprenti chez AKKA Technologies</i></legend>
+                        <p>Prise en main du logiciel Qt Creator et réalisation d'une IHM de démonstration sous Androïd.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Compilation croisée.</dd>
+                            <dt>Langage</dt>
+                            <dd>C++</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet CV<i> - 3 mois (2010) - Apprenti chez AKKA Technologies</i></legend>
+                        <p>Création d'un script Ruby permettant d'extraire les informations d'un CV au format .doc et de
+                            les mettre dans un fichier XML. Puis mise en forme du XML avec un fichier XSL.
+
+                        <p>
+                            <br/>
+                        <dl class="dl-horizontal dl-non-bold">
+                            <dt>Méthodes de travail</dt>
+                            <dd>Tests unitaires, gestion de configuration et refactoring.</dd>
+                            <dt>Langages</dt>
+                            <dd>Ruby, XML et XSL.</dd>
+                        </dl>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Stage de DUT<i> - 4 mois (2010) - Stagiaire chez PEBIX</i></legend>
+                        <p>En charge de créer un testeur de câbles sur un pic 24f en C, ainsi que nettoyer, paramétrer
+                            et préparer lensemble des périphériques des terminaux de paiement.
+
+                        <p>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <br/>
+
+                            <p>
+                            <center><img src="{{ asset('bundles/app/images/pebix-logo.GIF') }}" alt="PEBIX" border="0"/>
+                            </center>
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Projet Kart électrique<i> - 6 mois (2009 - 2010) - Projet de DUT</i></legend>
+                        <p>Participe au projet kart électrique de lIUT. Missions : comprendre, améliorer, cabler et
+                            implanter des hacheurs 2 quadrants et des hacheurs 1 quadrant ainsi que quelques travaux de
+                            mécaniques.
+
+                        <p>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Jobs d'étés<i> - 2 mois (2009)</i></legend>
+                        <p>Diverses missions en intérim de manutention principalement à Exapaq à Troyes (Tâches :
+                            charger et décharger des camions), ainsi que des déménagements de particulier.
+
+                        <p>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-md-8 well">
+                    <fieldset>
+                        <legend>Divers et projets personnels</legend>
+                        <font color="#760001">
+                            <ul>
+                                <li><font color="#181818">Création d'un accordeur de guitare avec Matlab.</font></li>
+                                <li><font color="#181818">Création d'un « décalleur de sous-titre » en Ruby.</font></li>
+                                <li><font color="#181818">Création de ce site internet en PHP avec les frameworks
+                                        Symfony2 et BootStrap.</font></li>
+                                <li><font color="#181818">Création de mon propre radar de recul à base d'un
+                                        microcontrôleur Arduino.</font></li>
+                                <li><font color="#181818">Habilitation électrique niveau B1V.</font></li>
+                                <li><font color="#181818">Participation à l'Agile Grenoble en 2011 et 2014.</font></li>
+                                <li><font color="#181818">Permis de conduire B et moyen de locomotion.</font></li>
+                                <li><font color="#181818">Pratique le sport et la musique, aime <a
+                                                href="{{ path('travels') }}">voyager</a> et s'intéresse à
+                                        l'actualité.</font></li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <a href="http://getbootstrap.com/" target="_blank">
+                                <p>
+                                <center><img src="{{ asset('bundles/app/images/twitter-bootstrap-logo.jpg') }}"
+                                             alt="BootStrap" border="0"/></center>
+                                </p>
+                            </a>
+                            <br/>
+                            <a href="http://arduino.cc/fr/" target="_blank">
+                                <p>
+                                <center><img src="{{ asset('bundles/app/images/logo_arduino.png') }}" alt="Arduino"
+                                             border="0"/></center>
+                                </p>
+                            </a>
+                            <br/>
+
+                            <p>
+                            <center><img src="{{ asset('bundles/app/images/agileGrenoble.jpg') }}" alt="Agile Grenoble"
+                                         border="0"/></center>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+
+
+
+                <aside>
+                    <a href="http://agile-grenoble.org/2011/start" target="_blank">
+                        <p><center><img src="<?php echo base_url(); ?>ressources/images/agileGrenoble.jpg" alt="Ruby" border="0" /></center></p>
+                    </a>
+                    <a href="<?php echo site_url("voyages"); ?>">
+                        <h1>La rubrique des voyages</h1>
+                    </a>
+                </aside>
+            </section>-->
+
+        </div>
+    </div>
+
+
+{% endblock %}

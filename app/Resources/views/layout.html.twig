@@ -1,0 +1,86 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+    <meta name="google-site-verification" content="TQgM5fBXaX1FnRHJ0q2eMSv7cYBJ16aNiN59YwhKZe0"/>
+    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>#}
+
+    <title>{% block title %}Guilhem Bourgoin{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+        {% stylesheets filter='cssrewrite'
+        '@AppBundle/Resources/public/css/*' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+        {% endstylesheets %}
+    {% endblock %}
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-navbar-collapse">
+                <span class="sr-only">Ouvrir le menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('homepage') }}">guilhembourgoin.com</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <!-- active -->
+                {#<li class="{% block activeBlog %}{% endblock %}"><a href="{{ path('blog') }}"><i#}
+                                {#class="glyphicon glyphicon-info-sign"></i> CV</a></li>#}
+                <li class="{% block activeCV %}{% endblock %}"><a href="{{ path('cv') }}"><i
+                                class="glyphicon glyphicon-info-sign"></i> CV</a></li>
+                <li class="{% block activeTravel %}{% endblock %}"><a href="{{ path('travels') }}"><i
+                                class="glyphicon glyphicon-picture"></i> Voyages</a></li>
+                <li class="{% block activeContact %}{% endblock %}"><a href="{{ path('contact') }}"><i
+                                class="glyphicon glyphicon-envelope"></i> Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        {% block body %}
+        {% endblock %}
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container-fluid">
+        <p class="text-muted">
+            Site développé par Guilhem Bourgoin. |
+            <a href="{{ path('contact') }}"> Contact</a>
+        </p>
+    </div>
+</footer>
+
+
+
+{% block javascripts %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    {% javascripts '@AppBundle/Resources/public/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+</body>
+</html>
+
+
+
