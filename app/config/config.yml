@@ -66,11 +66,11 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: mail
-    host:      smtp.gmail.com
-    username:  bourgoin.guilhem@gmail.com
-    port:       465
-    password:  A.vion89
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    port:      "%mailer_port%"
+    password:  "%mailer_password%"
     auth_mode:  login
     encryption: tls
 
